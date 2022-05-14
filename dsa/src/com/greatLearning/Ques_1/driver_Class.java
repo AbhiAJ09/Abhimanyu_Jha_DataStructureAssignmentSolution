@@ -14,7 +14,7 @@ public class driver_Class {
 			System.out.println("enter the floor size given on day : " + i);
 			arr_of_floors[i - 1] = aj.nextInt();
 		}
-		
+
 		System.out.println("The order of construction is as follows");
 
 		skyscraperConstruction obj = new skyscraperConstruction();
