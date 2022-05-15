@@ -107,28 +107,28 @@ public class skyscraperConstruction {
 
 						i++;
 
-						int[] temp3 = new int[arr_temp.size()];
+						ArrayList<Integer> temp3 = new ArrayList<Integer>();
 						int size1 = arr_temp.size();
 
 						/*
 						 *during adding stack "arr_temp" popped data into array temp3[],
 						 *checking whether element of temp3[] is equal to temp[i];
-						 *if temp[i]=temp3[n]
+						 *if temp3[n] contains temp[1]
 						 *then printing temp[i], and incrementing i;
 						 *else putting element into stack "stack1"
 						 */
 						
 						int n = 0;
 						while (n < size1) {
-							temp3[n] = arr_temp.pop();
-							if (temp3[n] == temp[i]) {
+							temp3.add(arr_temp.pop());
+							if (temp3.contains(temp[i])) {
 								System.out.print(temp[i] + " ");
 								i++;
 								n++;
 							}
 
 							else {
-								stack1.push(temp3[n]);
+								stack1.push(temp3.get(n));
 								n++;
 							}
 						}
